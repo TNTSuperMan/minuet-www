@@ -12,7 +12,7 @@ module.exports = {
     inject: false,
 
     // Search and metadata
-    title: 'Imagine, Program, Share',
+    title: 'Free, Simple, Lightweight',
     description:
         'minuet is a free programming community program',
 
