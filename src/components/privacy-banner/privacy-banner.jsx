@@ -24,7 +24,7 @@ class PrivacyBanner extends React.Component {
     }
 
     shouldShowBanner () {
-        const seen = jar.get('scratchpolicyseen');
+        const seen = jar.get('policyseen');
         return (
             Date.now() >= PRIVACY_UPDATE_START_TIME &&
             Date.now() < PRIVACY_UPDATE_END_TIME &&
@@ -38,7 +38,7 @@ class PrivacyBanner extends React.Component {
             expires: new Date(new Date().setDate(new Date().getDate() + 21)) // expires after 3 weeks
         };
         this.setState({dismissedPrivacyBanner: true});
-        jar.set('scratchpolicyseen', true, opts);
+        jar.set('policyseen', true, opts);
     }
     render () {
         const showBanner = this.shouldShowBanner();

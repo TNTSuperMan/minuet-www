@@ -121,7 +121,7 @@ const Cookies = injectIntl(() => (
                                     <td><FormattedMessage id="cookies.table.years.1" /></td>
                                 </tr>
                                 <tr>
-                                    <td>scratchpolicyseen</td>
+                                    <td>policyseen</td>
                                     <td><a href="/privacy_policy">Scratch</a></td>
                                     <td><FormattedMessage id="cookies.functional.scratchPolicySeen" /></td>
                                     <td><FormattedMessage id="cookies.table.weeks.3" /></td>
