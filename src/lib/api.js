@@ -85,8 +85,8 @@ module.exports = (opts, callback) => {
         });
     };
 
-    if (typeof jar.get('scratchlanguage') !== 'undefined') {
-        opts.headers['Accept-Language'] = `${jar.get('scratchlanguage')}, en;q=0.8`;
+    if (typeof jar.get('language') !== 'undefined') {
+        opts.headers['Accept-Language'] = `${jar.get('language')}, en;q=0.8`;
     }
     if (opts.authentication) {
         opts.headers['X-Token'] = opts.authentication;

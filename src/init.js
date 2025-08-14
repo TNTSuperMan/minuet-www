@@ -13,7 +13,7 @@ import jar from './lib/jar';
      * @return {string}
      */
     const updateLocale = () => {
-        let obj = jar.get('scratchlanguage');
+        let obj = jar.get('language');
         if (typeof obj === 'undefined') {
             obj = window.navigator.userLanguage || window.navigator.language;
             if (['pt', 'pt-pt', 'PT', 'PT-PT'].indexOf(obj) !== -1) {
@@ -22,14 +22,14 @@ import jar from './lib/jar';
         } else {
             // delete the old cookie (just hostname) by setting it to null and expiring in the past
             /* eslint-disable max-len */
-            document.cookie = `scratchlanguage=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/`;
+            document.cookie = `language=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/`;
             /* eslint-enable max-len */
             // create the new cookie
             let opts = {};
             if (window.location.hostname !== 'localhost') {
                 opts = {domain: `.${window.location.hostname}`};
             }
-            jar.set('scratchlanguage', obj, opts);
+            jar.set('language', obj, opts);
         }
         return obj;
     };

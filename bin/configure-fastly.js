@@ -69,8 +69,8 @@ async.auto({
             `        set req.http.Fastly-Temp-XFF = req.http.X-Forwarded-For;\n` +
             `    }\n` +
             `    set req.grace = 60s;\n` +
-            `    if (req.http.Cookie:scratchlanguage) {\n` +
-            `        set req.http.Accept-Language = req.http.Cookie:scratchlanguage;\n` +
+            `    if (req.http.Cookie:language) {\n` +
+            `        set req.http.Accept-Language = req.http.Cookie:language;\n` +
             `    } else {\n` +
             `        set req.http.Accept-Language = accept.language_lookup("${
                 Object.keys(languages).join(':')}", ` +
@@ -80,7 +80,7 @@ async.auto({
             `    }\n` +
             `    if (req.url ~ "^(/projects/|/fragment/account-nav.json|/session/)" && ` +
             `!req.http.Cookie:scratchsessionsid) {\n` +
-            `        set req.http.Cookie = "scratchlanguage=" req.http.Cookie:scratchlanguage;\n` +
+            `        set req.http.Cookie = "language=" req.http.Cookie:language;\n` +
             `    } else {\n` +
             `        return(pass);\n` +
             `    }\n` +
