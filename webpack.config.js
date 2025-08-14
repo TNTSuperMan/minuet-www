@@ -294,8 +294,6 @@ module.exports = {
             'process.env.THUMBNAIL_HOST': `"${process.env.THUMBNAIL_HOST || ''}"`,
             'process.env.DEBUG': Boolean(process.env.DEBUG),
             'process.env.GA_ID': `"${process.env.GA_ID || 'UA-000000-01'}"`,
-            'process.env.GTM_ENV_AUTH': `"${process.env.GTM_ENV_AUTH || ''}"`,
-            'process.env.GTM_ID': process.env.GTM_ID ? `"${process.env.GTM_ID}"` : null,
             'process.env.ONBOARDING_TEST_ACTIVE': `"${
                 process.env.ONBOARDING_TEST_ACTIVE || false
             }"`,
