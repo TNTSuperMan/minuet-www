@@ -14,9 +14,7 @@ module.exports = {
     // Search and metadata
     title: 'Imagine, Program, Share',
     description:
-        'Scratch is a free programming language and online community ' +
-        'where you can create your own interactive stories, games, ' +
-        'and animations.',
+        'minuet is a free programming community program',
 
     // override if mobile-friendly
     viewportWidth: 'device-width',
