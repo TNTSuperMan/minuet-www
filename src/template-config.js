@@ -17,11 +17,5 @@ module.exports = {
         'minuet is a free programming community program',
 
     // override if mobile-friendly
-    viewportWidth: 'device-width',
-
-    // Open graph
-    og_image: 'https://scratch.mit.edu/images/scratch-og.png',
-    og_image_type: 'image/png',
-    og_image_width: 986,
-    og_image_height: 860
+    viewportWidth: 'device-width'
 };
