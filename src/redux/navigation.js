@@ -177,7 +177,7 @@ module.exports.handleLogIn = (formData, callback) => (dispatch => {
 module.exports.handleLogOut = () => (() => {
     // POST to /accounts/logout using a dummy form instead of XHR. This ensures
     // logout only happens AFTER onbeforeunload has the chance to prevent nagivation.
-    jar.use('scratchcsrftoken', '/csrf_token/', (err, csrftoken) => {
+    jar.use('csrftoken', '/csrf_token/', (err, csrftoken) => {
         if (err) return log.error('Error while retrieving CSRF token', err);
         const form = document.createElement('form');
         form.setAttribute('method', 'POST');

@@ -69,7 +69,7 @@ const Cookies = injectIntl(() => (
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>scratchcsrftoken</td>
+                                    <td>csrftoken</td>
                                     <td><a href="/privacy_policy">Scratch</a></td>
                                     <td><FormattedMessage id="cookies.essential.csrf" /></td>
                                     <td><FormattedMessage id="cookies.table.years.1" /></td>
