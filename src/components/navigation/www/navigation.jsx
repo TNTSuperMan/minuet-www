@@ -101,11 +101,10 @@ class Navigation extends React.Component {
                 })}
             >
                 <ul>
-                    <li className="logo">
-                        <a
-                            aria-label="Scratch"
-                            href="/"
-                        />
+                    <li className="link">
+                        <a aria-label="minuet" href="/">
+                            minuet
+                        </a>
                     </li>
 
                     <li className="link create">
