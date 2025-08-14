@@ -79,7 +79,7 @@ async.auto({
                      `);\n` +
             `    }\n` +
             `    if (req.url ~ "^(/projects/|/fragment/account-nav.json|/session/)" && ` +
-            `!req.http.Cookie:scratchsessionsid) {\n` +
+            `!req.http.Cookie:sessionsid) {\n` +
             `        set req.http.Cookie = "language=" req.http.Cookie:language;\n` +
             `    } else {\n` +
             `        return(pass);\n` +

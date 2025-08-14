@@ -64,7 +64,7 @@ tap.test('testSetTTL', t => {
     t.equal(ttl, '' +
         'if (itsactuallyttyl) {\n' +
         '    if (req.url ~ "^(/projects/|/fragment/account-nav.json|/session/)" && ' +
-        '!req.http.Cookie:scratchsessionsid) {\n' +
+        '!req.http.Cookie:sessionsid) {\n' +
         '        set beresp.http.Vary = "Accept-Encoding, Accept-Language";\n' +
         '        unset beresp.http.set-cookie;\n' +
         '        return(deliver);\n' +
