@@ -2,13 +2,14 @@ const React = require('react');
 const FormattedMessage = require('react-intl').FormattedMessage;
 const render = require('../../lib/render.jsx');
 
+const externalLinks = require('../../lib/external-links.js');
 const Button = require('../../components/forms/button.jsx');
 const Page = require('../../components/page/www/page.jsx');
 const injectIntl = require('react-intl').injectIntl;
 
 require('./about.scss');
 
-const About = injectIntl(({intl}) => (
+const About = injectIntl(() => (
     <div className="inner about">
         <h1>minuetについて</h1>
 
