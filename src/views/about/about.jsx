@@ -8,7 +8,6 @@ const injectIntl = require('react-intl').injectIntl;
 
 require('./about.scss');
 
-const tedLink = chunks => <a href="https://www.ted.com/talks/mitch_resnick_let_s_teach_kids_to_code">{chunks}</a>;
 const About = injectIntl(({intl}) => (
     <div className="inner about">
         <h1>minuetについて</h1>
