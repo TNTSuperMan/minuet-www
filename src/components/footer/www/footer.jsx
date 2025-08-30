@@ -1,4 +1,3 @@
-const FormattedMessage = require('react-intl').FormattedMessage;
 const injectIntl = require('react-intl').injectIntl;
 const MediaQuery = require('react-responsive').default;
 const connect = require('react-redux').connect;
