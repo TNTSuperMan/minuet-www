@@ -12,7 +12,7 @@ const semi = today.getDate() === 1 && today.getMonth() === 3;
 
 const Page = ({
     children,
-    className,
+    className
 }) => (
     <ErrorBoundary componentName="Page">
         <div className={classNames('page', className)}>
