@@ -1,7 +1,6 @@
 const bindAll = require('lodash.bindall');
 const classNames = require('classnames');
 const connect = require('react-redux').connect;
-const FormattedMessage = require('react-intl').FormattedMessage;
 const injectIntl = require('react-intl').injectIntl;
 const PropTypes = require('prop-types');
 const React = require('react');
@@ -109,22 +108,22 @@ class Navigation extends React.Component {
 
                     <li className="link create">
                         <a href={createLink}>
-                            <FormattedMessage id="general.create" />
+                            作る
                         </a>
                     </li>
                     <li className="link explore">
                         <a href="/explore/projects/all">
-                            <FormattedMessage id="general.explore" />
+                            見る
                         </a>
                     </li>
                     <li className="link ideas">
                         <a href="/ideas">
-                            <FormattedMessage id="general.ideas" />
+                            アイデア
                         </a>
                     </li>
                     <li className="link about">
                         <a href="/about">
-                            <FormattedMessage id="general.about" />
+                            minuetについて
                         </a>
                     </li>
 
@@ -161,7 +160,7 @@ class Navigation extends React.Component {
                                             'show': this.props.unreadMessageCount > 0
                                         })}
                                     >{this.props.unreadMessageCount} </span>
-                                    <FormattedMessage id="general.messages" />
+                                    メッセージ
                                 </a>
                             </li>,
                             <li
@@ -170,9 +169,9 @@ class Navigation extends React.Component {
                             >
                                 <a
                                     href="/mystuff/"
-                                    title={this.props.intl.formatMessage({id: 'general.myStuff'})}
+                                    title="私の作品"
                                 >
-                                    <FormattedMessage id="general.myStuff" />
+                                    私の作品
                                 </a>
                             </li>,
                             <li
@@ -204,7 +203,7 @@ class Navigation extends React.Component {
                                     href="#"
                                     onClick={this.props.handleClickRegistration}
                                 >
-                                    <FormattedMessage id="general.joinScratch" />
+                                    minuetに参加しよう
                                 </a>
                             </li>,
                             <li
@@ -217,7 +216,7 @@ class Navigation extends React.Component {
                                     key="login-link"
                                     onClick={this.props.handleToggleLoginOpen}
                                 >
-                                    <FormattedMessage id="general.signIn" />
+                                    サインイン
                                 </a>
                                 <LoginDropdown
                                     key="login-dropdown"
