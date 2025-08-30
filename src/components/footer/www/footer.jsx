@@ -10,7 +10,6 @@ const LanguageChooser = require('../../languagechooser/languagechooser.jsx');
 const {frameless} = require('../../../lib/frameless');
 const intlShape = require('../../../lib/intl-shape');
 const {getLocale} = require('../../../lib/locales.js');
-const getScratchWikiLink = require('../../../lib/scratch-wiki');
 
 require('./footer.scss');
 
@@ -148,12 +147,10 @@ const Footer = props => (
 );
 
 Footer.propTypes = {
-    intl: intlShape.isRequired, // eslint-disable-line react/no-unused-prop-types
-    scratchWikiLink: PropTypes.string
+    intl: intlShape.isRequired
 };
 
 const mapStateToProps = (state, ownProps) => ({
-    scratchWikiLink: getScratchWikiLink(ownProps.intl.locale)
 });
 
 const ConnectedFooter = connect(mapStateToProps)(Footer);
