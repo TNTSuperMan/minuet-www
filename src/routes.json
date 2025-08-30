@@ -219,7 +219,7 @@
         "pattern": "^/?$",
         "routeAlias": "/?$",
         "view": "splash/splash",
-        "title": "Imagine, Program, Share"
+        "title": "Free, Simple, Lightweight"
     },
     {
         "name": "starter-projects",
