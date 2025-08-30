@@ -22,34 +22,29 @@ const Footer = props => (
                 <dl>
                     <dd>
                         <a href="/about">
-                            <FormattedMessage id="general.aboutScratch" />
-                        </a>
-                    </dd>
-                    <dd>
-                        <a href="https://www.scratchfoundation.org/careers">
-                            <FormattedMessage id="general.jobs" />
+                            minuetについて
                         </a>
                     </dd>
                     <dd>
                         <a href="/contact-us/">
-                            <FormattedMessage id="general.contactUs" />
+                            連絡先
                         </a>
                     </dd>
                 </dl>
                 <dl>
                     <dd>
                         <a href="/terms_of_use">
-                            <FormattedMessage id="general.termsOfUse" />
+                            利用規約
                         </a>
                     </dd>
                     <dd>
                         <a href="/privacy_policy">
-                            <FormattedMessage id="general.privacyPolicy" />
+                            プライバシーポリシー
                         </a>
                     </dd>
                     <dd>
                         <a href="/community_guidelines">
-                            <FormattedMessage id="general.guidelines" />
+                            コミュニティーガイドライン
                         </a>
                     </dd>
                 </dl>
@@ -59,175 +54,90 @@ const Footer = props => (
             <div className="lists">
                 <dl>
                     <dt>
-                        <FormattedMessage id="general.about" />
+                        minuetについて
                     </dt>
                     <dd>
                         <a href="/about">
-                            <FormattedMessage id="general.aboutScratch" />
-                        </a>
-                    </dd>
-                    <dd>
-                        <a href="/parents/">
-                            <FormattedMessage id="general.forParents" />
-                        </a>
-                    </dd>
-                    <dd>
-                        <a href="/educators">
-                            <FormattedMessage id="general.forEducators" />
-                        </a>
-                    </dd>
-                    <dd>
-                        <a href="/developers">
-                            <FormattedMessage id="general.forDevelopers" />
+                            minuetについて
                         </a>
                     </dd>
                     <dd>
                         <a href="/credits">
-                            <FormattedMessage id="general.credits" />
-                        </a>
-                    </dd>
-                    <dd>
-                        <a href="https://scratchfoundation.org/supporters">
-                            <FormattedMessage id="general.donors" />
-                        </a>
-                    </dd>
-                    <dd>
-                        <a href="https://www.scratchfoundation.org/careers">
-                            <FormattedMessage id="general.jobs" />
-                        </a>
-                    </dd>
-                    <dd>
-                        <a href="https://www.scratchfoundation.org/donate">
-                            <FormattedMessage id="general.donate" />
+                            クレジット
                         </a>
                     </dd>
 
                 </dl>
                 <dl>
                     <dt>
-                        <FormattedMessage id="general.community" />
+                        コミュニティ
                     </dt>
                     <dd>
                         <a href="/community_guidelines">
-                            <FormattedMessage id="general.guidelines" />
-                        </a>
-                    </dd>
-                    <dd>
-                        <a href="/discuss/">
-                            <FormattedMessage id="footer.discuss" />
-                        </a>
-                    </dd>
-                    <dd>
-                        <a href={props.scratchWikiLink}>
-                            <FormattedMessage id="general.wiki" />
+                            コミュニティーガイドライン
                         </a>
                     </dd>
                     <dd>
                         <a href="/statistics/">
-                            <FormattedMessage id="general.statistics" />
+                            統計情報
                         </a>
                     </dd>
                 </dl>
 
                 <dl>
                     <dt>
-                        <FormattedMessage id="general.support" />
+                        リソース
                     </dt>
                     <dd>
-                        <a href="/starter-projects">
-                            <FormattedMessage id="general.starterProjects" />
-                        </a>
-                    </dd>
-                    <dd>
-                        <a href="/ideas">
-                            <FormattedMessage id="general.ideas" />
-                        </a>
-                    </dd>
-                    <dd>
                         <a href="/faq">
-                            <FormattedMessage id="general.faq" />
+                            よくある質問
                         </a>
                     </dd>
                     <dd>
                         <a href="/download">
-                            <FormattedMessage id="general.download" />
+                            ダウンロード
                         </a>
                     </dd>
                     <dd>
                         <a href="/contact-us/">
-                            <FormattedMessage id="general.contactUs" />
+                            連絡先
                         </a>
                     </dd>
                 </dl>
 
                 <dl>
                     <dt>
-                        <FormattedMessage id="general.legal" />
+                        法的表示
                     </dt>
                     <dd>
                         <a href="/terms_of_use">
-                            <FormattedMessage id="general.termsOfUse" />
+                            利用規約
                         </a>
                     </dd>
                     <dd>
                         <a href="/privacy_policy">
-                            <FormattedMessage id="general.privacyPolicy" />
+                            プライバシーポリシー
                         </a>
                     </dd>
                     <dd>
                         <a href="/cookies">
-                            <FormattedMessage id="general.cookies" />
+                            クッキー
                         </a>
                     </dd>
                     <dd>
                         <a href="/DMCA">
-                            <FormattedMessage id="general.dmca" />
-                        </a>
-                    </dd>
-                    <dd>
-                        <a href="https://www.scratchfoundation.org/dsa/">
-                            <FormattedMessage id="general.dsa" />
-                        </a>
-                    </dd>
-                    <dd>
-                        <a href="https://accessibility.mit.edu/">
-                            <FormattedMessage id="general.mitAccessibility" />
+                            デジタルミレニアム著作権法（DMCA）
                         </a>
                     </dd>
                 </dl>
 
                 <dl>
                     <dt>
-                        <FormattedMessage id="footer.scratchFamily" />
+                        関連サイト
                     </dt>
                     <dd>
-                        <a href="http://scratched.gse.harvard.edu/">
-                            <FormattedMessage id="general.scratchEd" />
-                        </a>
-                    </dd>
-                    <dd>
-                        <a href="https://www.scratchjr.org/">
-                            <FormattedMessage id="general.scratchJr" />
-                        </a>
-                    </dd>
-                    <dd>
-                        <a href="http://day.scratch.mit.edu/">
-                            Scratch Day
-                        </a>
-                    </dd>
-                    <dd>
-                        <a href="https://www.scratchfoundation.org/scratch-conference">
-                            <FormattedMessage id="general.scratchConference" />
-                        </a>
-                    </dd>
-                    <dd>
-                        <a href="http://www.scratchfoundation.org/">
-                            <FormattedMessage id="general.scratchFoundation" />
-                        </a>
-                    </dd>
-                    <dd>
-                        <a href="/store">
-                            <FormattedMessage id="general.scratchStore" />
+                        <a href="https://github.com/TNTSuperMan/minuet">
+                            ソースコード
                         </a>
                     </dd>
 
