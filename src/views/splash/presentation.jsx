@@ -332,27 +332,27 @@ class SplashPresentation extends React.Component { // eslint-disable-line react/
         const formatMessage = this.props.intl.formatMessage;
 
         const messages = {
-            'general.viewAll': formatMessage({id: 'general.viewAll'}),
-            'news.scratchNews': formatMessage({id: 'news.scratchNews'}),
-            'welcome.welcomeToScratch': formatMessage({id: 'welcome.welcomeToScratch'}),
-            'welcome.explore': formatMessage({id: 'welcome.explore'}),
-            'welcome.exploreAlt': formatMessage({id: 'welcome.exploreAlt'}),
-            'welcome.community': formatMessage({id: 'welcome.community'}),
-            'welcome.communityAlt': formatMessage({id: 'welcome.communityAlt'}),
-            'welcome.create': formatMessage({id: 'welcome.create'}),
-            'welcome.createAlt': formatMessage({id: 'welcome.createAlt'}),
-            'intro.aboutScratch': formatMessage({id: 'intro.aboutScratch'}),
-            'intro.forEducators': formatMessage({id: 'intro.forEducators'}),
-            'intro.forParents': formatMessage({id: 'intro.forParents'}),
-            'intro.join': formatMessage({id: 'intro.join'}),
-            'intro.startCreating': formatMessage({id: 'intro.startCreating'}),
-            'intro.tagLine1': formatMessage({id: 'intro.tagLine1'}),
-            'intro.tagLine2': formatMessage({id: 'intro.tagLine2'}),
-            'intro.watchVideo': formatMessage({id: 'intro.watchVideo'}),
-            'teacherbanner.greeting': formatMessage({id: 'teacherbanner.greeting'}),
-            'teacherbanner.subgreeting': formatMessage({id: 'teacherbanner.subgreeting'}),
-            'teacherbanner.classesButton': formatMessage({id: 'teacherbanner.classesButton'}),
-            'teacherbanner.resourcesButton': formatMessage({id: 'general.resourcesTitle'})
+            'general.viewAll': 'すべてを見る',
+            'news.scratchNews': 'ニュース',
+            'welcome.welcomeToScratch': 'minuetへようこそ!',
+            'welcome.explore': '入門用プロジェクトを見る',
+            'welcome.exploreAlt': '入門用プロジェクト',
+            'welcome.community': 'コミュニティーについて学ぶ',
+            'welcome.communityAlt': 'コミュニティーガイドライン',
+            'welcome.create': 'プロジェクトを作る',
+            'welcome.createAlt': 'はじめよう',
+            'intro.aboutScratch': 'minuetについて',
+            'intro.forEducators': '教育関係者の方へ',
+            'intro.forParents': '保護者の方へ',
+            'intro.join': '参加する',
+            'intro.startCreating': '作ってみよう',
+            'intro.tagLine1': '物語や、ゲーム、アニメーションを作ろう',
+            'intro.tagLine2': '世界中のみんなと共有しよう',
+            'intro.watchVideo': 'ビデオを見る',
+            'teacherbanner.greeting': 'こんにちは',
+            'teacherbanner.subgreeting': '先生のアカウント',
+            'teacherbanner.classesButton': '私のクラス',
+            'teacherbanner.resourcesButton': 'Educator Resources'
         };
 
         return (
