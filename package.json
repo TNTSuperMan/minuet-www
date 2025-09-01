@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Standalone WWW client for minuet",
   "scripts": {
-    "start": "node ./dev-server/index.js",
+    "start": "bun ./dev-server/index.js",
     "test": "npm run test:lint && npm run build && npm run test:unit",
     "test:lint": "eslint . --ext .js,.jsx,.json",
     "test:health": "jest ./test/health/*.test.js",
