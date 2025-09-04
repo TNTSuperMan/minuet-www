@@ -274,7 +274,7 @@ module.exports = {
                 }
             ]
         }),
-        new webpack.DefinePlugin({
+        new webpack.DefinePlugin(process.env.NODE_EMV !== 'production' ? {} : {
             'process.env.NODE_ENV': `"${process.env.NODE_ENV || 'development'}"`,
             'process.env.API_HOST': `"${process.env.API_HOST || 'http://localhost:4519'}"`,
             'process.env.ROOT_URL': `"${process.env.ROOT_URL || 'http://localhost:4517'}"`,
