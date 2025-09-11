@@ -14,7 +14,17 @@
 
 現在、minuetという名前でローカルで簡単に動かせるプログラミングコミュニティーのプログラムを作っています。
 
-## minuet-wwwのクレジット表記
+## クレジット
+これは、[scratch-www](https://github.com/scratchfoundation/scratch-www)をフォークして作られたものです。  
+元のコードは、Scratch FoundationによってAGPLライセンスで公開されています。  
+ライセンスの全文は、[こちら](https://github.com/scratchfoundation/scratch-www/blob/develop/LICENSE)をご参照ください。
+
+主に商標の置き換えと、[minuet](https://github.com/TNTSuperMan/minuet)との統合をする変更が加えられています。詳細は以下をご覧ください。
+
+https://github.com/scratchfoundation/scratch-www/compare/develop...TNTSuperMan:minuet-www:develop
+
+---
+
 minuet-wwwの日本語翻訳は、[scratch-l10n](https://github.com/scratchfoundation/scratch-l10n)(AGPL-3.0)を元にしており、一部においてScratchの商標の除外・改変をしています。  
 以下、scratch-l10nのライセンス文です。
 ```
