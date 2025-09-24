@@ -91,7 +91,7 @@ class EmailStep extends React.Component {
     handleCaptchaSolved (token) {
         // Now that captcha is done, we can tell Formik we're submitting.
         this.formikBag.setSubmitting(true);
-        this.formData['g-recaptcha-response'] = token;
+        this.formData['turnstile-response'] = token;
         this.props.onNextStep(this.formData);
     }
     setCaptchaRef (ref) {

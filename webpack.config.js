@@ -278,8 +278,8 @@ module.exports = {
             'process.env.NODE_ENV': `"${process.env.NODE_ENV || 'development'}"`,
             'process.env.API_HOST': `"${process.env.API_HOST || 'http://localhost:4519'}"`,
             'process.env.ROOT_URL': `"${process.env.ROOT_URL || 'http://localhost:4517'}"`,
-            'process.env.RECAPTCHA_SITE_KEY': `"${
-                process.env.RECAPTCHA_SITE_KEY || '6Lf6kK4UAAAAABKTyvdSqgcSVASEnMrCquiAkjVW'}"`,
+            'process.env.TURNSTILE_SITE_KEY': `"${
+                process.env.TURNSTILE_SITE_KEY || ''}"`,
             'process.env.ASSET_HOST': `"${process.env.ASSET_HOST || 'http://localhost:4518'}"`,
             'process.env.BACKPACK_HOST': `"${process.env.BACKPACK_HOST || 'https://backpack.scratch.mit.edu'}"`,
             'process.env.CLOUDDATA_HOST': `"${process.env.CLOUDDATA_HOST || 'clouddata.scratch.mit.edu'}"`,

@@ -8,61 +8,65 @@ class Captcha extends React.Component {
         bindAll(this, [
             'setCaptchaRef',
             'onCaptchaLoad',
-            'executeCaptcha'
+            'executeCaptcha',
+            'onCaptchaSolved'
         ]);
 
     }
     componentDidMount () {
-        if (window.grecaptcha) {
+        if (window.turnstile) {
             this.onCaptchaLoad();
         } else {
             // If grecaptcha doesn't exist on window, we havent loaded the captcha js yet. Load it.
             // ReCaptcha calls a callback when the grecatpcha object is usable. That callback
             // needs to be global so set it on the window.
-            window.grecaptchaOnLoad = this.onCaptchaLoad;
+            window.captchaOnLoad = this.onCaptchaLoad;
             // Load Google ReCaptcha script.
             const script = document.createElement('script');
             script.async = true;
             script.onerror = this.props.onCaptchaError;
-            script.src = `https://www.recaptcha.net/recaptcha/api.js?onload=grecaptchaOnLoad&render=explicit&hl=${window._locale}`;
+            script.src = `https://challenges.cloudflare.com/turnstile/v0/api.js?onload=captchaOnLoad`;
             document.body.appendChild(script);
         }
     }
     componentWillUnmount () {
-        window.grecaptchaOnLoad = null;
+        window.captchaOnLoad = null;
     }
 
     onCaptchaLoad () {
         // Let the owner of this component do some work
         // when captcha is done loading (e.g. enabling a button)
         this.props.onCaptchaLoad();
-        this.grecaptcha = window.grecaptcha;
-        if (!this.grecaptcha) {
+        this.turnstile = window.turnstile;
+        if (!this.turnstile) {
             // According to the reCaptcha documentation, this callback shouldn't get
             // called unless window.grecaptcha exists. This is just here to be extra defensive.
             this.props.onCaptchaError();
             return;
         }
-        this.widgetId = this.grecaptcha.render(this.captchaRef,
+        if (!process.env.TURNSTILE_SITE_KEY) {
+            return;
+        }
+        this.widgetId = this.turnstile.render(this.captchaRef,
             {
-                callback: this.props.onCaptchaSolved,
-                sitekey: process.env.RECAPTCHA_SITE_KEY
+                callback: this.onCaptchaSolved,
+                sitekey: process.env.TURNSTILE_SITE_KEY
             },
             true);
+    }
+    onCaptchaSolved (token) {
+        this.captchaToken = token;
     }
     setCaptchaRef (ref) {
         this.captchaRef = ref;
     }
     executeCaptcha () {
-        this.grecaptcha.execute(this.widgetId);
+        this.props.onCaptchaSolved(this.captchaToken || '');
     }
     render () {
         return (
             <div
                 className="g-recaptcha"
-                data-badge="bottomright"
-                data-sitekey={process.env.RECAPTCHA_SITE_KEY}
-                data-size="invisible"
                 ref={this.setCaptchaRef}
             />
         );

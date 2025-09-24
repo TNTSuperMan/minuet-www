@@ -192,7 +192,7 @@ class JoinFlow extends React.Component {
                     'birth_month': formData.birth_month,
                     'birth_year': formData.birth_year,
                     'under_16': isUnder16,
-                    'g-recaptcha-response': formData['g-recaptcha-response'],
+                    'turnstile-response': formData['turnstile-response'],
                     'gender': formData.gender,
                     'country': formData.country,
                     'is_robot': formData.yesno
