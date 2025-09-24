@@ -1162,8 +1162,8 @@ class EmailStep extends React.Component {
         this.setState({
             waiting: false
         });
-        this.formData['g-recaptcha-response'] = token;
-        this.setState({'g-recaptcha-response': token});
+        this.formData['turnstile-response'] = token;
+        this.setState({'turnstile-response': token});
         this.props.onNextStep(this.formData);
     }
     handleCaptchaError () {
