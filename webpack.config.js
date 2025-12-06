@@ -218,7 +218,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new MiniCssExtractPlugin(),
+        new MiniCssExtractPlugin({ ignoreOrder: true }),
         new HtmlWebpackBackwardsCompatibilityPlugin(),
         new EmitFilePlugin({
             filename: 'version.txt',
@@ -242,14 +242,6 @@ module.exports = {
                 {
                     from: 'node_modules/@scratch/scratch-gui/dist/static/blocks-media',
                     to: 'static/blocks-media'
-                },
-                {
-                    from: 'node_modules/@scratch/scratch-gui/dist/chunks/mediapipe/face_detection/',
-                    to: 'chunks/mediapipe/face_detection'
-                },
-                {
-                    context: 'node_modules/@scratch/scratch-gui/dist/',
-                    from: 'chunks/fetch-worker.*.{js,js.map}'
                 },
                 {
                     context: 'node_modules/@scratch/scratch-gui/dist/',
